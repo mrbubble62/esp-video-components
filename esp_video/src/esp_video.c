@@ -734,6 +734,10 @@ esp_err_t esp_video_set_format(struct esp_video *video, const struct v4l2_format
         memcpy(&stream->format, format, sizeof(struct v4l2_format));
     }
 
+#if CONFIG_ESP_VIDEO_ENABLE_TEST_PATTERN
+    video->ops->set_test_pattern(video,true);
+#endif
+
     return ESP_OK;
 }
 

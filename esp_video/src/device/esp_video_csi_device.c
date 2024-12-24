@@ -534,6 +534,7 @@ static const struct esp_video_ops s_csi_video_ops = {
     .set_sensor_format = csi_video_set_sensor_format,
     .get_sensor_format = csi_video_get_sensor_format,
     .query_menu    = csi_video_query_menu,
+    .set_test_pattern = csi_video_set_test_pattern,
 };
 
 /**

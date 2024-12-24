@@ -323,6 +323,10 @@ struct esp_video_ops {
     /*!< Query menu value */
 
     esp_err_t (*query_menu)(struct esp_video *video, struct v4l2_querymenu *qmenu);
+
+    /*!< Set test pattern */  
+
+    esp_err_t (*set_test_pattern)(struct esp_video *video, bool enable);  
 };
 
 #ifdef __cplusplus
